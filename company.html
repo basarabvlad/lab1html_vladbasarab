@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="vlad1x_">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComputerZone — Комп'ютери</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #071525;
+            color: #eaf4ff;
+        }
+
+        header {
+            background: #0b213b;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #21486d;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .pc-icon {
+            width: 55px;
+            height: 42px;
+            border: 3px solid #48a9ff;
+            border-radius: 6px;
+            position: relative;
+            background: #102f50;
+        }
+
+        .pc-icon::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: #48a9ff;
+            bottom: -9px;
+            left: 12px;
+        }
+
+        nav a {
+            color: #dcecff;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #48a9ff;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 50px auto;
+        }
+
+        .intro {
+            padding: 50px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #103b62, #0a2038);
+            border: 1px solid #285c83;
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .intro h1 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .intro p {
+            color: #bfd3e6;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .intro-icon {
+            font-size: 110px;
+            filter: drop-shadow(0 0 25px #1688d8);
+        }
+
+        .info {
+            background: #0b2139;
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid #21486d;
+            line-height: 1.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #0b2139;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #145486;
+            padding: 18px 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 16px 12px;
+            border-bottom: 1px solid #203e59;
+            color: #cbdbea;
+        }
+
+        tr:hover {
+            background: #102f4e;
+        }
+
+        .badge {
+            background: #17699e;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        footer {
+            margin-top: 70px;
+            padding: 25px;
+            text-align: center;
+            background: #06111f;
+            color: #8198ad;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="pc-icon"></div>
+        ComputerZone
+    </div>
+
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="company.html">Комп'ютери</a>
+        <a href="news.html">Новини</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <section class="intro">
+        <div>
+            <h1>Обери свій комп'ютер</h1>
+
+            <p>
+                У ComputerZone представлені готові конфігурації
+                для навчання, роботи, мультимедіа та сучасних ігор.
+                Порівняй характеристики та обери оптимальний варіант.
+            </p>
+        </div>
+
+        <div class="intro-icon">🖥️</div>
+    </section>
+
+    <div class="info">
+        <p>
+            <abbr title="Центральний процесор" id="cpu">
+                Процесор
+            </abbr>
+            є одним із головних компонентів комп'ютера.
+            <cite lang="uk" class="quote">
+                Правильно підібрана конфігурація
+            </cite>
+            дозволяє отримати необхідну продуктивність.
+        </p>
+
+        <p style="margin-top:12px;">
+            <dfn id="ram" title="Оперативна пам'ять">
+                Оперативна пам'ять
+            </dfn>
+            відповідає за швидку роботу програм.
+        </p>
+
+        <p style="margin-top:12px;">
+            Приклад технічного позначення:
+            <code class="technical" lang="en">
+                Intel Core i5 / 16GB RAM / RTX 4060
+            </code>
+        </p>
+
+        <pre lang="uk" class="technical">
+ComputerZone
+Модель: Gamer X
+Призначення: Ігри та робота
+        </pre>
+
+        <address style="margin-top:15px;" dir="ltr">
+            ComputerZone, відділ продажу комп'ютерів
+        </address>
+
+        <p style="margin-top:12px;">
+            <q title="Рекомендація" id="recommend" class="recommend">
+                Обирай конфігурацію відповідно до своїх задач.
+            </q>
+        </p>
+    </div>
+
+    <table>
+        <tr>
+            <th>Комп'ютер</th>
+            <th>Процесор</th>
+            <th>Частота</th>
+            <th>Відеокарта</th>
+            <th>RAM</th>
+            <th>Звукова карта</th>
+            <th>HDD / SSD</th>
+        </tr>
+
+        <tr>
+            <td><strong>Office Start</strong></td>
+            <td>Intel</td>
+            <td>3.6 GHz</td>
+            <td>Intel UHD</td>
+            <td><span class="badge">8 GB</span></td>
+            <td>Realtek</td>
+            <td>512 GB SSD</td>
+        </tr>
+
+        <tr>
+            <td><strong>Home Pro</strong></td>
+            <td>AMD</td>
+            <td>4.2 GHz</td>
+            <td>Radeon RX 6600</td>
+            <td><span class="badge">16 GB</span></td>
+            <td>Realtek</td>
+            <td>1 TB SSD</td>
+        </tr>
+
+        <tr>
+            <td><strong>Gamer X</strong></td>
+            <td>Intel</td>
+            <td>4.8 GHz</td>
+            <td>GeForce RTX 4060</td>
+            <td><span class="badge">32 GB</span></td>
+            <td>Realtek</td>
+            <td>1 TB SSD</td>
+        </tr>
+
+        <tr>
+            <td><strong>Ultra Pro</strong></td>
+            <td>AMD</td>
+            <td>5.1 GHz</td>
+            <td>GeForce RTX 4070</td>
+            <td><span class="badge">32 GB</span></td>
+            <td>Creative</td>
+            <td>2 TB SSD</td>
+        </tr>
+    </table>
+
+</div>
+
+<footer>
+    ComputerZone © 2026 | Каталог комп'ютерів
+</footer>
+
+</body>
+</html>

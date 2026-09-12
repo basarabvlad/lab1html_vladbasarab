@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="vlad">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComputerZone — Продаж комп'ютерів</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #071525;
+            color: #eaf4ff;
+        }
+
+        header {
+            background: #0b213b;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #21486d;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .pc-icon {
+            width: 55px;
+            height: 42px;
+            border: 3px solid #48a9ff;
+            border-radius: 6px;
+            position: relative;
+            background: #102f50;
+        }
+
+        .pc-icon::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: #48a9ff;
+            bottom: -9px;
+            left: 12px;
+        }
+
+        nav a {
+            color: #dcecff;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #48a9ff;
+        }
+
+        .hero {
+            margin: 50px auto;
+            max-width: 1100px;
+            min-height: 390px;
+            padding: 60px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #0d3155, #092039);
+            border: 1px solid #245982;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 620px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #b9cee2;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-pc {
+            font-size: 130px;
+            filter: drop-shadow(0 0 25px #1c7fc5);
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 14px 28px;
+            background: #1688d8;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #31a4f2;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .author {
+            background: #0c2743;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #21486d;
+            line-height: 1.8;
+        }
+
+        .offer {
+            margin-top: 25px;
+            padding: 25px;
+            background: #0a1d32;
+            border-left: 4px solid #2b9de8;
+            border-radius: 12px;
+        }
+
+        .old-price {
+            color: #849bb0;
+            font-size: 17px;
+        }
+
+        .new-price {
+            color: #55b9ff;
+            font-size: 28px;
+            font-weight: bold;
+            margin-left: 12px;
+        }
+
+        footer {
+            margin-top: 70px;
+            padding: 25px;
+            text-align: center;
+            background: #06111f;
+            color: #8198ad;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="pc-icon"></div>
+        ComputerZone
+    </div>
+
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="company.html">Комп'ютери</a>
+        <a href="news.html">Новини</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Комп'ютери для будь-яких задач</h1>
+
+        <p style="color:#b9cee2;" dir="ltr" align="left">
+            ComputerZone — сучасний магазин комп'ютерної техніки.
+            Тут можна знайти готові ПК для навчання, роботи,
+            ігор та професійних задач.
+        </p>
+
+        <a class="button" href="company.html">Переглянути комп'ютери</a>
+    </div>
+
+    <div class="hero-pc">🖥️</div>
+</section>
+
+<section class="section">
+    <h2>Про автора</h2>
+
+    <div class="author">
+        <h3 style="color:#48a9ff;" dir="ltr" align="left">
+            Розробник сайту
+        </h3>
+
+        <h4 align="left" style="color:#dcecff;" title="Інформація про автора">
+            vlad
+        </h4>
+
+        <h5 title="Навчальна робота" align="left" id="author-info">
+            Лабораторна робота з HTML
+        </h5>
+
+        <p style="line-height:1.7;" dir="ltr" align="left">
+            Цей сайт створено для представлення вигаданої компанії
+            ComputerZone, яка спеціалізується на продажу сучасних
+            комп'ютерів та комплектуючих.
+        </p>
+
+        <br>
+
+        <hr title="Розділ інформації" class="separator"
+            style="border:0;border-top:1px solid #285477;">
+
+        <div class="offer">
+            <p>
+                Спеціальна пропозиція:
+                <span class="old-price">
+                    <strike width="200" size="3" align="center">32 999 грн</strike>
+                </span>
+                <span class="new-price">29 999 грн</span>
+            </p>
+
+            <p style="margin-top:10px;">
+                <s id="oldOffer" title="Попередня пропозиція" lang="uk">
+                    Попередня ціна
+                </s>
+                — актуальна ціна вказана вище.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    ComputerZone © 2026 | Продаж комп'ютерів
+</footer>
+
+</body>
+</html>
