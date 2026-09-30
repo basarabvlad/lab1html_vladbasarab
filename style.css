@@ -1,0 +1,733 @@
+/* ================================
+   ЛАБОРАТОРНА РОБОТА №2
+   Таблиця каскадних стилів
+   ComputerZone
+   ================================ */
+
+/* Універсальний селектор */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Селектор ідентифікатора */
+#author-info {
+    color: #48a9ff !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Основні стилі сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #071525;
+    color: #eaf4ff;
+    direction: ltr;
+    unicode-bidi: normal;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    background-color: #0b213b;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom-width: thin;
+    border-bottom-color: #21486d;
+    border-bottom-style: solid;
+
+    position: relative;
+    z-index: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pc-icon {
+    width: 55px;
+    height: 42px;
+
+    border-left-width: medium;
+    border-right-width: medium;
+    border-color: #48a9ff;
+    border-style: outset;
+
+    position: relative;
+    background-color: #102f50;
+}
+
+/* Псевдоелемент */
+.pc-icon::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #48a9ff;
+    bottom: -9px;
+    left: 12px;
+}
+
+/* Контекстний селектор */
+nav a {
+    color: #dcecff;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: bold;
+}
+
+/* Сусідній селектор */
+nav a + a {
+    margin-left: 28px;
+}
+
+/* Псевдоклас */
+nav a:hover {
+    color: #48a9ff;
+}
+
+/* :active */
+nav a:active {
+    color: white;
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    max-width: 1100px;
+    min-width: 300px;
+    min-height: 390px;
+
+    padding: 60px;
+
+    border-color: #245982;
+    border-style: groove;
+
+    background-color: #0d3155;
+    background-image: linear-gradient(135deg, #0d3155, #092039);
+    background-attachment: scroll;
+    background-position: bottom;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    position: relative;
+    z-index: auto;
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* ::first-letter */
+.hero h1::first-letter {
+    color: #48a9ff;
+}
+
+/* ::first-line */
+.hero p::first-line {
+    color: #bfd3e6;
+}
+
+.hero p {
+    color: #b9cee2;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow: visible;
+}
+
+.hero-pc {
+    font-size: 130px;
+}
+
+.button {
+    display: inline;
+    margin-top: 28px;
+    padding: 14px 28px;
+
+    background-color: #1688d8;
+    color: white;
+
+    border-right-style: dotted;
+    border-right-color: #8bd2ff;
+
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* :hover */
+.button:hover {
+    background-color: #31a4f2;
+}
+
+/* ================================
+   SECTION
+   ================================ */
+
+.section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* Перший дочірній елемент */
+.author > h3:first-child {
+    color: #48a9ff;
+}
+
+/* first-of-type */
+.author p:first-of-type {
+    line-height: 1.7;
+}
+
+/* last-of-type */
+.author p:last-of-type {
+    padding-bottom: 10px;
+}
+
+.author {
+    background-color: #0c2743;
+    padding: 30px;
+
+    border-color: #21486d;
+    border-style: groove;
+
+    line-height: 1.8;
+}
+
+.offer {
+    margin-top: 25px;
+    margin-bottom: auto;
+
+    padding: 25px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+
+    background-color: #0a1d32;
+
+    border-left-width: medium;
+    border-right-width: thin;
+    border-color: #2b9de8;
+    border-style: outset;
+}
+
+.old-price {
+    color: #849bb0;
+    font-size: 17px;
+}
+
+.new-price {
+    color: #55b9ff;
+    font-size: 28px;
+    font-weight: bold;
+
+    margin-left: 12px;
+    margin-right: auto;
+}
+
+/* Атрибутний селектор [attr] */
+[title] {
+    outline-style: solid;
+    outline-color: #21486d;
+}
+
+/* Атрибутний селектор [attr=value] */
+[lang="uk"] {
+    direction: ltr;
+}
+
+/* Атрибутний селектор [attr~=value] */
+[title~="Інформація"] {
+    border-right-style: dotted;
+}
+
+/* ================================
+   ФОРМА
+   ================================ */
+
+.contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    padding: 25px;
+
+    background-color: #0b2139;
+
+    border-color: #285c83;
+    border-style: dotted;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    background-color: #102f50;
+    color: white;
+
+    border-color: #285c83;
+    border-style: solid;
+}
+
+/* :focus */
+.contact-form input:focus {
+    outline-style: solid;
+    outline-color: #48a9ff;
+}
+
+/* :invalid */
+.contact-form input:invalid {
+    border-color: #ff5555;
+}
+
+/* [type] */
+input[type] {
+    line-height: normal;
+}
+
+/* [type=value] */
+input[type="checkbox"] {
+    width: auto;
+    height: auto;
+}
+
+/* :checked */
+input[type="checkbox"]:checked {
+    outline-style: solid;
+    outline-color: #48a9ff;
+}
+
+/* ================================
+   COMPANY PAGE
+   ================================ */
+
+.container {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.intro {
+    padding: 50px;
+
+    border-color: #285c83;
+    border-style: groove;
+
+    background-color: #103b62;
+    background-image: linear-gradient(135deg, #103b62, #0a2038);
+    background-position: right;
+
+    margin-bottom: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    position: relative;
+}
+
+.intro h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.intro p {
+    color: #bfd3e6;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.intro-icon {
+    font-size: 110px;
+}
+
+.info {
+    background-color: #0b2139;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    border-color: #21486d;
+    border-style: dotted;
+
+    line-height: 1.8;
+}
+
+.info p:first-of-type::first-letter {
+    font-size: 28px;
+    color: #48a9ff;
+}
+
+.technical {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    overflow: scroll;
+    max-height: 150px;
+}
+
+table {
+    width: 100%;
+    background-color: #0b2139;
+    display: table;
+    overflow: visible;
+}
+
+th {
+    background-color: #145486;
+    padding: 18px 12px;
+    text-align: left;
+
+    vertical-align: top;
+}
+
+td {
+    padding: 16px 12px;
+    border-bottom-width: thin;
+    border-bottom-color: #203e59;
+    border-bottom-style: dotted;
+
+    color: #cbdbea;
+    vertical-align: baseline;
+}
+
+/* Селектор сусідів */
+th + th {
+    border-left-width: thin;
+    border-left-color: #285c83;
+    border-left-style: dotted;
+}
+
+/* :hover */
+tr:hover {
+    background-color: #102f4e;
+}
+
+.badge {
+    background-color: #17699e;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* ================================
+   NEWS
+   ================================ */
+
+.news-hero {
+    min-height: 330px;
+    padding: 50px;
+
+    border-color: #285c83;
+    border-style: groove;
+
+    background-color: #0e3b62;
+    background-position: bottom;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.news-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.news-hero p {
+    color: #bfd3e6;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.news-icon {
+    font-size: 100px;
+}
+
+.date {
+    display: inline;
+    margin-bottom: 15px;
+    color: #54baff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-grid {
+    display: table;
+    width: 100%;
+}
+
+article {
+    background-color: #0b2139;
+
+    border-color: #21486d;
+    border-style: groove;
+
+    border-right-width: thin;
+
+    padding: 28px;
+    margin-bottom: 25px;
+
+    position: static;
+}
+
+article h2 {
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+article p {
+    color: #b8cadb;
+    line-height: 1.7;
+}
+
+/* first-of-type */
+article p:first-of-type::first-line {
+    color: #54baff;
+}
+
+/* last-of-type */
+article p:last-of-type {
+    margin-bottom: 10px;
+}
+
+aside {
+    margin-top: 35px;
+    margin-bottom: 30px;
+
+    background-color: #0a1c30;
+
+    padding: 28px;
+    padding-left: 35px;
+
+    border-left-width: medium;
+    border-left-color: #2699e4;
+    border-left-style: outset;
+
+    color: #b8cadb;
+
+    clear: left;
+}
+
+.tag {
+    display: inline;
+    background-color: #155b8b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #06111f;
+    color: #8198ad;
+
+    visibility: visible;
+}
+
+/* ================================
+   ДОДАТКОВІ ВЛАСТИВОСТІ
+   ================================ */
+
+/* float */
+.hero-pc,
+.intro-icon,
+.news-icon {
+    float: none;
+}
+
+/* clear */
+footer {
+    clear: none;
+}
+
+/* visibility */
+.separator {
+    visibility: visible;
+}
+
+/* overflow */
+.info {
+    overflow: visible;
+}
+
+/* clip */
+.pc-icon {
+    clip: rect(0, 55px, 42px, 0);
+}
+
+/* =========================================
+   ДОДАТКОВІ ВЛАСТИВОСТІ ЗА ВАРІАНТОМ
+   ========================================= */
+
+/* display */
+.display-inline {
+    display: inline;
+}
+
+.display-run-in {
+    display: run-in;
+}
+
+.display-table-row {
+    display: table-row;
+}
+
+.display-table-cell {
+    display: table-cell;
+}
+
+.display-table {
+    display: table;
+}
+
+.display-table-column {
+    display: table-column;
+}
+
+/* position */
+.position-static {
+    position: static;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* z-index */
+.position-relative {
+    z-index: auto;
+}
+
+/* float */
+.float-left {
+    float: left;
+}
+
+.float-none {
+    float: none;
+}
+
+/* clear */
+.clear-none {
+    clear: none;
+}
+
+.clear-left {
+    clear: left;
+}
+
+/* unicode-bidi */
+.bidi-normal {
+    unicode-bidi: normal;
+}
+
+.bidi-override {
+    unicode-bidi: bidi-override;
+}
+
+/* line-height */
+.line-normal {
+    line-height: normal;
+}
+
+.line-custom {
+    line-height: 30px;
+}
+
+/* vertical-align */
+.align-baseline {
+    vertical-align: baseline;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.align-text-bottom {
+    vertical-align: text-bottom;
+}
+
+.align-text-top {
+    vertical-align: text-top;
+}
+
+/* overflow */
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+/* visibility */
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* background-position */
+.bg-bottom {
+    background-position: bottom;
+}
+
+.bg-right {
+    background-position: right;
+}
+
+/* background attachment */
+.bg-scroll {
+    background-attachment: scroll;
+}
