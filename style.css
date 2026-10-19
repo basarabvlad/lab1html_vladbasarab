@@ -731,3 +731,179 @@ footer {
 .bg-scroll {
     background-attachment: scroll;
 }
+
+
+/* =========================================
+   LABORATORY WORK 3 — LISTS AND MENU
+   ComputerZone
+   ========================================= */
+
+/* Загальні стилі сторінок лабораторної №3 */
+
+.lists-page,
+.menu-page {
+    padding-top: 35px;
+}
+
+.lists-hero,
+.menu-hero {
+    padding: 40px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #103b62, #0a2038);
+    border: 1px solid #285c83;
+    border-radius: 14px;
+}
+
+.lists-hero h1,
+.menu-hero h1 {
+    color: #48a9ff;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.lists-hero p,
+.menu-hero p {
+    color: #bfd3e6;
+    line-height: 1.8;
+}
+
+/* Картки зі списками */
+
+.list-card,
+.menu-card {
+    padding: 30px;
+    margin-bottom: 25px;
+    background-color: #0b2139;
+    border: 1px solid #21486d;
+    border-radius: 12px;
+}
+
+.list-card h2,
+.menu-card h2 {
+    color: #48a9ff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Нумерований список */
+
+.number-list {
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 30px;
+    line-height: 2;
+}
+
+.number-list li {
+    padding-left: 5px;
+}
+
+/* Маркований список */
+
+.custom-list {
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-left: 10px;
+    line-height: 2.2;
+}
+
+.custom-list li::marker {
+    color: #48a9ff;
+}
+
+/* Список визначень */
+
+.definition-list dt {
+    color: #54baff;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.definition-list dd {
+    color: #bfd3e6;
+    margin-left: 25px;
+    line-height: 1.8;
+}
+
+/* Навігаційне меню */
+
+.menu-links {
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 5px;
+}
+
+.menu-links li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #102f50;
+    border-left: 3px solid #48a9ff;
+    border-radius: 6px;
+}
+
+.menu-links li::marker {
+    color: #48a9ff;
+}
+
+.menu-links a,
+.menu-card a,
+.back-link a,
+.list-card a {
+    color: #54baff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-links a:hover,
+.menu-card a:hover,
+.back-link a:hover,
+.list-card a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Посилання повернення */
+
+.back-link {
+    margin: 25px 0;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Внутрішні посилання прокручують до розділу */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Адаптація для вузьких екранів */
+
+@media (max-width: 700px) {
+    .lists-page,
+    .menu-page {
+        padding: 15px;
+    }
+
+    .lists-hero,
+    .menu-hero,
+    .list-card,
+    .menu-card {
+        padding: 20px;
+    }
+
+    .lists-hero h1,
+    .menu-hero h1 {
+        font-size: 28px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
