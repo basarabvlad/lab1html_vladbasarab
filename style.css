@@ -733,12 +733,11 @@ footer {
 }
 
 
-/* =========================================
-   LABORATORY WORK 3 — LISTS AND MENU
-   ComputerZone
-   ========================================= */
 
-/* Загальні стилі сторінок лабораторної №3 */
+/* ==========================================
+   LABORATORY WORK 3 — VARIANT 2
+   Lists, menu and hyperlinks
+   ========================================== */
 
 .lists-page,
 .menu-page {
@@ -747,8 +746,8 @@ footer {
 
 .lists-hero,
 .menu-hero {
-    padding: 40px;
-    margin-bottom: 30px;
+    padding: 35px;
+    margin-bottom: 25px;
     background: linear-gradient(135deg, #103b62, #0a2038);
     border: 1px solid #285c83;
     border-radius: 14px;
@@ -757,7 +756,7 @@ footer {
 .lists-hero h1,
 .menu-hero h1 {
     color: #48a9ff;
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 15px;
 }
 
@@ -767,11 +766,9 @@ footer {
     line-height: 1.8;
 }
 
-/* Картки зі списками */
-
 .list-card,
 .menu-card {
-    padding: 30px;
+    padding: 28px;
     margin-bottom: 25px;
     background-color: #0b2139;
     border: 1px solid #21486d;
@@ -781,33 +778,49 @@ footer {
 .list-card h2,
 .menu-card h2 {
     color: #48a9ff;
-    font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+}
+
+.list-card h2::before {
+    content: "› ";
+    color: #48a9ff;
 }
 
 /* Нумерований список */
 
 .number-list {
     list-style-type: decimal;
+    list-style-image: none;
     list-style-position: outside;
+    list-style: decimal outside;
     padding-left: 30px;
     line-height: 2;
+    counter-reset: product-counter;
 }
 
 .number-list li {
     padding-left: 5px;
 }
 
-/* Маркований список */
-
-.custom-list {
-    list-style-type: circle;
-    list-style-position: inside;
-    padding-left: 10px;
-    line-height: 2.2;
+.number-list li::before {
+    counter-increment: product-counter;
+    content: "";
 }
 
-.custom-list li::marker {
+/* Маркований список */
+
+.custom-list,
+.equipment-items {
+    list-style-type: circle;
+    list-style-image: none;
+    list-style-position: inside;
+    list-style: circle inside;
+    padding-left: 10px;
+    line-height: 2.1;
+}
+
+.custom-list li::marker,
+.equipment-items li::marker {
     color: #48a9ff;
 }
 
@@ -816,7 +829,7 @@ footer {
 .definition-list dt {
     color: #54baff;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 16px;
     margin-bottom: 5px;
 }
 
@@ -826,7 +839,57 @@ footer {
     line-height: 1.8;
 }
 
-/* Навігаційне меню */
+/* Старий тег dir: зберігаємо його в HTML,
+   а відображення списку налаштовуємо через CSS. */
+
+.equipment-list {
+    display: block;
+    padding-left: 10px;
+    color: #bfd3e6;
+}
+
+.equipment-list ul {
+    margin-top: 8px;
+}
+
+/* Рядок marquee: рух забезпечується CSS-анімацією */
+
+.marquee-box {
+    overflow: hidden;
+    background: #103b62;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.moving-text {
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Додатковий напис біля застарілого command */
+
+.command-example {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin: 12px 0;
+    background: #102f50;
+    border-radius: 6px;
+    color: #bfd3e6;
+}
+
+.command-example command {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #48a9ff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Навігаційні меню */
 
 .menu-links {
     list-style-type: square;
@@ -846,6 +909,9 @@ footer {
     color: #48a9ff;
 }
 
+/* Посилання */
+
+.site-nav a,
 .menu-links a,
 .menu-card a,
 .back-link a,
@@ -855,6 +921,7 @@ footer {
     font-weight: bold;
 }
 
+.site-nav a:hover,
 .menu-links a:hover,
 .menu-card a:hover,
 .back-link a:hover,
@@ -863,7 +930,11 @@ footer {
     text-decoration: underline;
 }
 
-/* Посилання повернення */
+.list-card a:focus,
+.menu-card a:focus {
+    outline: 2px solid #48a9ff;
+    outline-offset: 3px;
+}
 
 .back-link {
     margin: 25px 0;
@@ -871,13 +942,11 @@ footer {
     text-align: center;
 }
 
-/* Внутрішні посилання прокручують до розділу */
-
 html {
     scroll-behavior: smooth;
 }
 
-/* Адаптація для вузьких екранів */
+/* Адаптивність */
 
 @media (max-width: 700px) {
     .lists-page,
