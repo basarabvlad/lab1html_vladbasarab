@@ -976,3 +976,223 @@ html {
         margin: 5px;
     }
 }
+
+
+
+/* =========================================
+   ЛАБОРАТОРНА РОБОТА №4
+   СТОРІНКА ТАБЛИЦЬ — ВАРІАНТ №2
+   ========================================= */
+
+/* Основна таблиця */
+
+#variant2-table {
+    display: table;
+    width: 100%;
+    margin: 25px auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 4px;
+    empty-cells: show;
+    caption-side: top;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #48a9ff;
+
+    color: #ffffff;
+    background-color: #10243a;
+}
+
+/* Заголовок таблиці */
+
+#variant2-table caption {
+    display: table-caption;
+    caption-side: top;
+    padding: 14px;
+    color: #48a9ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Група стовпців */
+
+#variant2-table colgroup {
+    display: table-column-group;
+}
+
+#variant2-table col {
+    display: table-column;
+}
+
+#variant2-table .narrow-column {
+    width: 5%;
+}
+
+#variant2-table .wide-column {
+    width: 17%;
+}
+
+#variant2-table .normal-column {
+    width: 12%;
+}
+
+/* Заголовкова частина */
+
+#variant2-table thead {
+    display: table-header-group;
+}
+
+#variant2-table thead th {
+    background-color: #183a58;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Основні групи рядків */
+
+#variant2-table tbody {
+    display: table-row-group;
+}
+
+#variant2-table tr {
+    display: table-row;
+}
+
+/* Комірки */
+
+#variant2-table th,
+#variant2-table td {
+    display: table-cell;
+    padding: 10px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #48a9ff;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Тіло таблиці */
+
+#variant2-table tbody tr:nth-child(even) {
+    background-color: #16314c;
+}
+
+#variant2-table tbody tr:hover {
+    background-color: #245078;
+}
+
+/* Номерні комірки */
+
+#variant2-table .number-cell {
+    background-color: #183a58;
+    font-weight: bold;
+}
+
+/* Нижня частина таблиці */
+
+#variant2-table tfoot {
+    display: table-footer-group;
+}
+
+#variant2-table .table-footer {
+    background-color: #183a58;
+    color: #48a9ff;
+    font-weight: bold;
+}
+
+/* Властивість для озвучення заголовків таблиці */
+#variant2-table th {
+    speak-header: once;
+}
+
+/* =========================================
+   ДОДАТКОВА ТАБЛИЦЯ КОМПЛЕКТУЮЧИХ
+   ========================================= */
+
+.components-table {
+    display: inline-table;
+    width: 100%;
+    margin: 25px auto;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 4px;
+    empty-cells: show;
+    caption-side: top;
+
+    border: 2px solid #48a9ff;
+    color: #ffffff;
+    background-color: #10243a;
+}
+
+.components-table caption {
+    display: table-caption;
+    padding: 12px;
+    color: #48a9ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.components-table thead {
+    display: table-header-group;
+}
+
+.components-table tbody {
+    display: table-row-group;
+}
+
+.components-table tr {
+    display: table-row;
+}
+
+.components-table th,
+.components-table td {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #48a9ff;
+    text-align: center;
+}
+
+.components-table th {
+    background-color: #183a58;
+}
+
+.components-table tr:hover {
+    background-color: #245078;
+}
+
+/* Додаткові приклади типів відображення таблиць */
+
+.table-row-example {
+    display: table-row;
+}
+
+.table-cell-example {
+    display: table-cell;
+}
+
+.table-column-group-example {
+    display: table-column-group;
+}
+
+.table-column-example {
+    display: table-column;
+}
+
+.table-row-group-example {
+    display: table-row-group;
+}
+
+.table-header-group-example {
+    display: table-header-group;
+}
+
+.table-footer-group-example {
+    display: table-footer-group;
+}
+
+.table-caption-example {
+    display: table-caption;
+}
